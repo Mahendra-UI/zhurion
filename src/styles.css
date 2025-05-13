@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+
+html, body {
+    font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, span, strong, em, a, li, ul, ol, div, section, header, footer {
+    font-family: 'Nunito', sans-serif;
+}
+th, td {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    text-decoration: none;
+}
