@@ -17,7 +17,7 @@ export class HomesevenComponent implements OnInit, AfterViewInit {
 
 
 count = 0;
-  target = 36;
+  target = 35;
   interval: any;
 
   zhuriontext: string = 'ZHURION';
