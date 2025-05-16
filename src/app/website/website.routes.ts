@@ -16,11 +16,18 @@ export const websiteRoutes: Routes = [
             // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
             loadComponent: () => import('./homefour/homefour.component').then((m) => m.HomefourComponent),
         },
-                {
+        {
             path: 'homefive',
             // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
             loadComponent: () => import('./homefive/homefive.component').then((m) => m.HomefiveComponent),
         },
+
+        {
+            path: 'homesix',
+            // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
+            loadComponent: () => import('./homesix/homesix.component').then((m) => m.HomesixComponent),
+        },
+        
         {
             path: 'hometwo',
             loadComponent: () => import('./hometwo/hometwo.component').then((m) => m.HometwoComponent),
