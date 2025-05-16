@@ -9,12 +9,12 @@ export const websiteRoutes: Routes = [
         {
         path: '',
         // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
-        loadComponent: () => import('./homefour/homefour.component').then((m) => m.HomefourComponent),
+        loadComponent: () => import('./homeseven/homeseven.component').then((m) => m.HomesevenComponent),
         },
         {
             path: 'home',
             // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
-            loadComponent: () => import('./homefour/homefour.component').then((m) => m.HomefourComponent),
+            loadComponent: () => import('./homeseven/homeseven.component').then((m) => m.HomesevenComponent),
         },
         {
             path: 'homefive',
@@ -26,6 +26,11 @@ export const websiteRoutes: Routes = [
             path: 'homesix',
             // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
             loadComponent: () => import('./homesix/homesix.component').then((m) => m.HomesixComponent),
+        },
+        {
+            path: 'home',
+            // loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
+            loadComponent: () => import('./homeseven/homeseven.component').then((m) => m.HomesevenComponent),
         },
         
         {

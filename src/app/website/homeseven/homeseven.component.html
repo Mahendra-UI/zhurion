@@ -1,0 +1,563 @@
+  <nav class="navbar navbar-expand-lg fixed-top py-1 bg-white" [ngClass]="{ 'scrolled': isScrolled }" style="border-bottom: 1px solid #fff;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" routerLink="/home">
+        <div class="bg-white rounded">
+            <img src="logo16.png" alt="image" class="img-fluid" style="width: 290px;">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item"><a class="nav-link" href="#home" [class.active]="activeSection === 'home'">Home</a></li> -->
+           <li class="nav-item">
+            <a class="nav-link" href="#home" [class.active]="activeSection === 'home'">Home</a>
+           </li>
+          <li class="nav-item"><a class="nav-link" href="#about" [class.active]="activeSection === 'about'">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" [class.active]="activeSection === 'services'">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#keydifferentiators" [class.active]="activeSection === 'keydifferentiators'">Key Differentiators</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#keydifferentiators" [class.active]="activeSection === 'keydifferentiators'">Key Differentiators </a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link" href="#ourexpertise" [class.active]="activeSection === 'ourexpertise'">Our Expertise</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#contact" [class.active]="activeSection === 'contact'">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    /* .home::before {
+        content: "";
+        background-color: #0E0A31;
+        position: absolute;
+        bottom: 60px;
+        top: 60px;
+        left: 0;
+        right: 0;
+        transform: skewY(-3deg);
+    }
+
+    .home .container {
+        position: relative;
+    } */
+
+  </style>
+
+  
+  <section id="home" class="home section d-flex align-items-center">
+    <!-- <img src="hero-bg.jpg" alt="" class="hero-bg"> -->
+    <img src="bg-banner-home5.png" alt="image" class="hero-bg">
+    <div class="container position-relative text-center text-white" data-aos="fade-down" data-aos-delay="100">
+                     <h2 class="pt-5 mt-5">
+                        Welcome to
+                        <span class="zhurion-word">
+                          ZHURION
+                        </span>
+                      </h2>
+      <p class="typewriter-text">
+        {{ displayText }}<span class="cursor" *ngIf="showCursor">|</span>
+      </p>
+      <div class="w-58 mx-auto px-3">
+        <p>
+            From Signature Code to Breakthrough Tech. Driven by Precision.
+    
+    We’re a team of seasoned Tech Alchemists turning bold ideas into high-performance digital products. From backend architecture to killer UI, we do it all — fast, clean, and aligned with your mission.
+    
+    No fluff. No friction. Just firepower
+          </p>
+      </div>
+
+      <!-- <p>Redefining Digital Transformation</p> -->
+      <!-- <a href="#about" class="btn-get-started">Get Started</a> -->
+    </div>
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+       <span class="mouse-scroll"></span>
+  </section>
+  
+
+    <section id="about" class="about section" #aboutSection>
+    <div class="overlay-about overlay-image-about"></div>
+    <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <!-- <h2>About</h2> -->
+        <p>The Story Behind Us</p>
+      </div>
+      <!-- <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2>About</h2>
+      </div> -->
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6 position-relative order-lg-last aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="image-wrapper">
+                <div class="position-relative">
+                    <!-- <img src="image-banner-home5.png" class="img-fluid" alt="image"> -->
+                    <img src="service3.jpg" class="img-fluid" alt="image">
+                </div>
+          <div class="experience-badge floating">
+                <h3>{{ count }}+ <span>Years</span></h3>
+                <p>Of Combined Experience</p>
+        </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 content aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <!-- <h3>About Us</h3> -->
+          <p>
+            A crew of seasoned tech innovators with more than 30+ years of combined experience who build digital products that don’t just work, they wow. From scalable architectures to sleek user interfaces, we bring serious firepower to the table. We have spent years in the foundry of app development, and we’ve learned one thing: great tech isn’t just built but is forged.
+          </p>
+          <p>
+            At <strong style="color: #ED1C24;">Zhurion</strong>, we move fast, think sharp, and build smarter. No jargon. No hand holding. Just clean code, smart design, and solutions that are wired to win. We thrive on collaboration, stay brutally transparent, and always align our builds with your bigger picture.
+          </p>
+          <p>
+            You bring the vision.
+We bring the velocity.
+Together, we create what others  only imagine.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+<!-- <section class="py-5 bg-light">
+  <div class="container"> -->
+    <!-- <h2 class="text-center mb-5 fw-bold">Our Core Domains</h2> -->
+<section id="services" class="section pt-0" #aboutSection>
+    <div class="overlay-about overlay-image-about"></div>
+    <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <!-- <h2>Our Expertise</h2> -->
+        <!-- <p>Our Core Domains</p> -->
+         <p>
+            Sectors We have Served
+         </p>
+      </div>
+      <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Government -->
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-primary" viewBox="0 0 24 24">
+            <path d="M2 9.5V8l10-5 10 5v1.5l-1 .5v2h1v2h-2v8h-2v-8h-2v8h-2v-8h-2v8H9v-8H7v8H5v-8H3v-2h1v-2l-1-.5z"/>
+          </svg>
+          <div class="fw-semibold">Government</div>
+        </div>
+      </div>
+
+      <!-- Agriculture -->
+      <!-- <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-success" viewBox="0 0 24 24">
+            <path d="M12 2a7 7 0 0 0-7 7v5c0 4.97 3.58 9 8 9s8-4.03 8-9V9a7 7 0 0 0-7-7zM7 9a5 5 0 0 1 10 0v5c0 3.31-2.69 6-6 6s-6-2.69-6-6V9z"/>
+          </svg>
+          <div class="fw-semibold">Agriculture</div>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+            <svg width="48" height="48" fill="currentColor" class="mb-2 text-success" viewBox="0 0 24 24">
+            <path d="M17 2a7 7 0 0 1 0 14h-2a5 5 0 0 1-5-5v-2a7 7 0 0 1 7-7zm-8 7a6 6 0 0 0-6 6v4a1 1 0 0 0 2 0v-4a4 4 0 0 1 4-4h4a1 1 0 1 0 0-2H9z"/>
+            </svg>
+            <div class="fw-semibold">Agriculture</div>
+        </div>
+    </div> -->
+
+    <!-- Agriculture -->
+<div class="col-6 col-md-4 col-lg-2 text-center">
+  <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card icon-container">
+    <!-- <svg width="48" height="48" fill="currentColor" class="mb-2 text-success" viewBox="0 0 24 24">
+      <path d="M12 2C10 2 8 4 8 6c0 1.1.9 2 2 2h1v2H9a5 5 0 0 0-5 5v3h2v-3a3 3 0 0 1 3-3h2v2h2v-2h2a3 3 0 0 1 3 3v3h2v-3a5 5 0 0 0-5-5h-2V8h1c1.1 0 2-.9 2-2 0-2-2-4-4-4z"/>
+    </svg> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="text-success mb-2" viewBox="0 0 24 24"> <path d="M12 2C10.343 2 9 3.343 9 5a3 3 0 0 0 3 3c.732 0 1.39-.263 1.897-.696C14.542 8.92 15.7 11 18 11a4 4 0 0 0 4-4c0-3.866-5.373-7-10-7s-10 3.134-10 7a4 4 0 0 0 4 4c2.3 0 3.458-2.08 4.103-3.696A3.001 3.001 0 0 0 12 8a3 3 0 0 0-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3c0 1.306-.835 2.418-2 2.83V22h-2V10.83C8.835 10.418 8 9.306 8 8a4 4 0 0 1 4-4z"/> </svg> -->
+     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="text-success mb-2" viewBox="0 0 24 24">
+      <path d="M12 2c.6 0 1 .4 1 1v2h1a1 1 0 1 1 0 2h-1v2h1a1 1 0 1 1 0 2h-1v2h1a1 1 0 1 1 0 2h-1v3a1 1 0 1 1-2 0v-3h-1a1 1 0 1 1 0-2h1v-2h-1a1 1 0 1 1 0-2h1V7h-1a1 1 0 1 1 0-2h1V3c0-.6.4-1 1-1z"/>
+    </svg> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#4CAF50" viewBox="0 0 24 24">
+  <path d="M12 2C11.4 2 11 2.4 11 3v4.8c-.9-.3-1.9-.8-2.6-1.5l-.6-.6-.7.7.6.6c.7.7 1.3 1.5 1.7 2.3H8v1h1.4c-.4.8-1 1.6-1.7 2.3l-.6.6.7.7.6-.6c.7-.7 1.7-1.2 2.6-1.5V21h2V12.5c.9.3 1.9.8 2.6 1.5l.6.6.7-.7-.6-.6c-.7-.7-1.3-1.5-1.7-2.3H16v-1h-1.4c.4-.8 1-1.6 1.7-2.3l.6-.6-.7-.7-.6.6c-.7.7-1.7 1.2-2.6 1.5V3c0-.6-.4-1-1-1z"/>
+</svg> -->
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" stroke="#4CAF50" stroke-width="4" fill="none"/>
+  <path d="M20 40C22 35 30 30 40 30C38 34 35 36 32 36C29 36 26 34 24 34C22 34 20 36 20 40Z" fill="#4CAF50"/>
+  <path d="M32 36V22" stroke="#4CAF50" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 22C33 19 36 17 40 18C39 20 37 22 34 22H32Z" fill="#A5D6A7"/>
+  <path d="M32 22C31 19 28 17 24 18C25 20 27 22 30 22H32Z" fill="#A5D6A7"/>
+</svg> -->
+
+<!-- main -->
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#43A047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" stroke="#43A047"/>
+  <path d="M12 12v4M12 12c-1.5 0-2.5-1-3-2.5M12 12c1.5 0 2.5-1 3-2.5" />
+  <path d="M12 12c-.5-2-2-4-4-4M12 12c.5-2 2-4 4-4" />
+</svg> -->
+<!-- main -->
+
+<!-- <svg width="48" height="48" fill="currentColor" class="mb-2 text-success" viewBox="0 0 24 24">
+  <path d="M12 2a10 10 0 1 1-7.07 2.93A10 10 0 0 1 12 2zm0 18a8 8 0 1 0-5.66-2.34A8 8 0 0 0 12 20zm.5-11c.5 0 1 .5 1 1s-.5 1-1 1h-.8a2.5 2.5 0 0 1-2.45-3.1.5.5 0 0 1 .95-.1A1.5 1.5 0 0 0 11.2 9H12.5zm-.5 2.5a1 1 0 0 1 .83.44c.34.52.17 1.06-.33 1.34a3 3 0 0 0-1.5 2.2c-.01.28-.23.52-.5.52s-.49-.24-.48-.52a4 4 0 0 1 2-2.93.5.5 0 0 1 .5-.05z"/>
+</svg> -->
+
+<svg width="48" height="48" fill="currentColor" class="mb-2 text-success" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+  <path d="M12 12v4M12 12c-1.5 0-2.5-1-3-2.5M12 12c1.5 0 2.5-1 3-2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 12c-.5-2-2-4-4-4M12 12c.5-2 2-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="20" stroke="#4CAF50" stroke-width="3" fill="none"/>
+  <path d="M24 38C26 34 32 30 40 30C38 34 35 36 32 36C29 36 26 34 24 34" fill="#4CAF50"/>
+  <path d="M32 36V26" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 26C33 23 36 21 40 22C39 24 37 26 34 26H32Z" fill="#A5D6A7"/>
+  <path d="M32 26C31 23 28 21 24 22C25 24 27 26 30 26H32Z" fill="#A5D6A7"/>
+</svg> -->
+
+    <div class="fw-semibold">Agriculture</div>
+  </div>
+</div>
+
+
+      <!-- Health -->
+      <!-- <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-danger" viewBox="0 0 24 24">
+            <path d="M21 6h-5V3h-8v3H3v2h5v3h8V8h5zM7 21v-6h2v6h6v-6h2v6h2v-6h2v-2h-2v-2H5v2H3v2h2v6z"/>
+          </svg>
+          <div class="fw-semibold">Health</div>
+        </div>
+      </div> -->
+      <!-- Health -->
+<div class="col-6 col-md-4 col-lg-2 text-center">
+  <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+    <svg width="48" height="48" fill="currentColor" class="mb-2 text-danger" viewBox="0 0 24 24">
+      <path d="M12 2a10 10 0 1 1-7.07 2.93A10 10 0 0 1 12 2zm0 18a8 8 0 1 0-5.66-2.34A8 8 0 0 0 12 20zm-1-9v-3h2v3h3v2h-3v3h-2v-3H8v-2h3z"/>
+    </svg>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="#E53935"/>
+  <line x1="12" y1="8" x2="12" y2="16"/>
+  <line x1="8" y1="12" x2="16" y2="12"/>
+</svg> -->
+
+    <div class="fw-semibold">Health</div>
+  </div>
+</div>
+
+      <!-- Logistics -->
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-warning" viewBox="0 0 24 24">
+            <path d="M3 3h18v4h-2v14H5V7H3V3zm4 4v12h10V7H7z"/>
+          </svg>
+          <div class="fw-semibold">Logistics</div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-info" viewBox="0 0 24 24">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+            <path d="M11 12.08L3.26 8.39 2 9l9 4.91 9-4.91-1.26-.61L13 12.08V17h-2v-4.92z"/>
+          </svg>
+          <div class="fw-semibold">Education</div>
+        </div>
+      </div>
+
+      <!-- Banking -->
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <div class="p-3 bg-white border rounded shadow-sm h-100 domain-card">
+          <svg width="48" height="48" fill="currentColor" class="mb-2 text-secondary" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v2h20V7l-10-5zM4 10v10h2v-3h12v3h2V10H4zm4 3h2v3H8v-3zm6 0h2v3h-2v-3z"/>
+          </svg>
+          <div class="fw-semibold">Banking</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+<section id="services" class="services section pt-0 position-relative">
+    <div class="overlay-services overlay-image-service"></div>
+    <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <!-- <h2>Services</h2> -->
+        <p>What We Craft</p>
+    </div>
+    <div class="container">
+    <div class="row g-4">
+
+            <div class="col-md-8">
+                <div class="pt-5 position-relative">
+                    <h2>
+                        At Zhurion, we don't just ship code — we build momentum.
+Our tech stack is locked, loaded, and built to elevate your business. No jargon. Just outcomes.
+                    </h2>
+                </div>
+            </div>
+        <!-- Service Card Template with Hover & Animation -->
+        <div class="col-md-6 col-lg-4" *ngFor="let service of services">
+            <div class="card shadow-sm h-100 position-relative animate__animated animate__fadeInUp"
+     [ngClass]="['service-card',service.className]"
+     style="transition: transform 0.3s ease; border: 1px solid color-mix(in srgb, #3d4348, transparent 85%);">
+
+        <!-- <div class="card border-0 shadow-sm h-100 position-relative animate__animated animate__fadeInUp" style="transition: transform 0.3s ease;"> -->
+            <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+
+                <div class="icon-circle me-3" 
+        [ngStyle]="{'background': service.bg, 'color': service.color}">
+    <i class="bi" [ngClass]="service.icon" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="mb-0 fw-bold" [ngStyle]="{'color': service.color}">{{ service.title }}</h5>
+            </div>
+            <p class="card-text mb-1 fw-bold">{{ service.heading }}</p>
+            <ul class="text-muted ps-3 mb-0">
+                <li *ngFor="let point of service.points">{{ point }}</li>
+            </ul>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2 badge rounded-pill"
+                [ngStyle]="{'background': service.color, 'color': '#fff'}">
+            {{ service.tag }}
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+
+<section id="keydifferentiators" class="keydifferentiators section" style="background-color: #F9FBFF;">
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <p>
+            Our Edge, Your Advantage 
+        </p>
+      </div>
+        <div class="container">
+        <div class="row gy-4">
+        <!-- Feature Row -->
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Rocket/Speed SVG -->
+            <svg width="32" height="32" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M3 12h15M9 6l6 6-6 6" />
+            </svg>
+            </div>
+            <div>
+            <h5 class="fw-semibold text-primary">Fast Delivery Turnaround</h5>
+            <p class="text-muted mb-0">We deliver high-quality applications quickly, helping you launch faster and stay ahead of the curve.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Grid/Customization Icon -->
+            <svg width="32" height="32" fill="none" stroke="#6f42c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+            </svg>
+            </div>
+            <div>
+                <!-- <h5 class="fw-semibold" style="color: #6f42c1;">Highly Customizable Solutions</h5> -->
+            <h5 class="fw-semibold text-purple">Highly Customizable Solutions</h5>
+            <p class="text-muted mb-0">Our apps are flexible, tailored to your business goals, processes, and brand identity.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Shield/Security -->
+            <svg width="32" height="32" fill="none" stroke="#198754" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            </div>
+            <div>
+            <h5 class="fw-semibold text-success">Enterprise-Grade Security</h5>
+            <p class="text-muted mb-0">We embed robust security from day one to protect data and ensure compliance.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Automation Gear -->
+            <svg width="32" height="32" fill="none" stroke="#fd7e14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                <circle cx="12" cy="12" r="3"/>
+            </svg>
+            </div>
+            <div>
+            <h5 class="fw-semibold text-warning">Intelligent Automation</h5>
+            <p class="text-muted mb-0">Smart automation reduces manual work, streamlines ops, and boosts productivity.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Analytics bars -->
+            <svg width="32" height="32" fill="none" stroke="#0dcaf0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M4 19h16M9 15v4M15 11v8M12 13v6"/>
+            </svg>
+            </div>
+            <div>
+            <h5 class="fw-semibold text-info">Data-Driven Decision Making</h5>
+            <p class="text-muted mb-0">Dashboards and analytics give real-time insights to guide strategy.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+            <div class="me-3 flex-shrink-0">
+            <!-- Face/UX icon -->
+            <!-- <svg width="32" height="32" fill="none" stroke="#6610f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 15s1.5-2 4-2 4 2 4 2"/>
+                <path d="M9 9h.01M15 9h.01"/>
+            </svg> -->
+            <svg width="32" height="32" fill="none" stroke="#17a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M8 15s1.5 2 4 2 4-2 4-2"/>
+    <path d="M9 9h.01M15 9h.01"/>
+    </svg>
+
+            </div>
+            <div>
+            <h5 class="fw-semibold text-indigo">User-Friendly Design</h5>
+            <p class="text-muted mb-0">We design intuitive, clean interfaces for seamless multi-device experiences.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-start">
+        <!-- <div class="col-md-6 d-flex align-items-start mx-md-auto"> -->
+            <div class="me-3 flex-shrink-0">
+            <!-- Speed icon -->
+            <svg width="32" height="32" fill="none" stroke="#dc3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                <path d="M22 4 12 14.01l-3-3"/>
+            </svg>
+            </div>
+            <div>
+            <h5 class="fw-semibold text-danger">Robust & Optimized Performance</h5>
+            <p class="text-muted mb-0">Built with clean, efficient code to ensure fast, reliable, scalable results.</p>
+            </div>
+        </div>
+
+        </div>
+      </div>
+</section>
+
+      <section id="contact" class="contact section pb-0">
+        
+    <img src="bg-banner-home5.png" alt="image" class="hero-bg">
+
+    <!-- Section Title -->
+         <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <!-- <h2 class="text-white">Contact</h2>
+        <p class="text-white">Contact Us</p> -->
+        <p class="text-white">
+            Start the Conversation
+        </p>
+      </div>
+
+
+    <!-- <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+      <h2>Contact</h2>
+    </div> -->
+
+    <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-6 ">
+          <div class="row gy-4">
+
+            <div class="col-lg-12">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>New No 37, Taylors Road, Kilpauk, Chennai -600010</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>+91 - 9360625513</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>hello&#64;zhurion.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" class="php-email-form aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+              </div>
+
+              <div class="col-md-12 text-end">
+                <!-- <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div> -->
+
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
+
+      </div>
+                    <div class="row mt-5" style="border-top: 1px solid #fff;">
+            <div class="col-md-12">
+                <div class="copyright text-center text-white py-3">
+                    Copyright © {{currentYear}} All Rights Reserved To <span><strong style="color: #ED1C24;">ZHURION</strong></span>
+                </div>
+          </div>
+          </div>
+
+    </div>
+  </section>
