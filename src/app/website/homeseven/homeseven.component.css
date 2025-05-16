@@ -620,10 +620,10 @@ section  {
 .section-title p::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 2px;
   display: inline-block;
-  background: #ef6603;
-  margin: 4px 10px;
+  background: #ED1C24;
+  margin: 4px;
 }
 
 
@@ -695,13 +695,28 @@ section  {
   animation: experience-float 3s ease-in-out infinite;
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .about .image-wrapper .experience-badge {
     position: static;
     width: fit-content;
     margin: 0 auto;
   }
+} */
+
+@media (max-width: 992px) {
+  .about .image-wrapper .experience-badge {
+    top: auto;
+    bottom: 10px; /* Adjust based on need */
+    right: 10px;
+    left: 10px;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: better contrast on small screens */
+    width: auto;
+    padding: 1rem;
+    border-radius: 8px;
+  }
 }
+
 
 .about .image-wrapper .experience-badge h3 {
   /* color: #ffffff; */
@@ -1949,6 +1964,7 @@ section  {
   position: relative;
   overflow: hidden; /* ensures ::before won't break layout */
   z-index: 1;
+  border: 1px solid #0D6EFD !important;
 }
 
 .service-card.enterprise-app::before {
@@ -2003,6 +2019,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #198754 !important;
 }
 
 /* Background image layer */
@@ -2060,6 +2077,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #0dcaf0 !important;
 }
 
 /* Background overlay image */
@@ -2116,6 +2134,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #dc3545 !important;
 }
 
 /* Background overlay image */
@@ -2172,6 +2191,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #a855f7 !important;
 }
 
 /* Background overlay image */
@@ -2228,6 +2248,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #fd7e14 !important;
 }
 
 /* Background overlay image */
@@ -2283,6 +2304,7 @@ section  {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border: 1px solid #ffc107 !important;
 }
 
 /* Background overlay image */

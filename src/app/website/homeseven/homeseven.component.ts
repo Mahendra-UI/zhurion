@@ -17,7 +17,7 @@ export class HomesevenComponent implements OnInit, AfterViewInit {
 
 
 count = 0;
-  target = 30;
+  target = 36;
   interval: any;
 
   zhuriontext: string = 'ZHURION';
@@ -357,7 +357,7 @@ services = [
       'CMS, e-commerce, headless or hybrid, we tailor it',
       'Every pixel optimized for ROI'
     ],
-    tag: 'Web & App',
+    tag: 'Web & Mobile',
     color: '#198754',
     bg: '#e7f6ee',
     className: 'digital-services'
