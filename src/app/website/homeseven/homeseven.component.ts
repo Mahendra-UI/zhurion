@@ -2,12 +2,16 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+
+
 import * as AOS from 'aos';
 import { CountUpModule } from 'ngx-countup';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-homeseven',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   templateUrl: './homeseven.component.html',
   styleUrl: './homeseven.component.css'
 })
@@ -15,6 +19,19 @@ export class HomesevenComponent implements OnInit, AfterViewInit {
   // text: string = 'Redefining Digital Transformation';
   // characters: string[] = [];
 
+
+constructor(
+    private fb: FormBuilder,
+    private apiSer: ApiService
+  ) {
+    this.contactForm = this.fb.group({
+      full_name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      mobile_number: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
+      subject: ['', Validators.required],
+      message: ['', Validators.required]
+    });
+  }
 
 count = 0;
   target = 35;
@@ -528,5 +545,36 @@ services2 = [
       tag: 'AI'
     }
   ];
+
+
+
+  contactForm!: FormGroup;
+  submitted = false;
+
+
+get f() {
+  return this.contactForm.controls;
+}
+
+
+  onSubmit(): void {
+    this.submitted = true;
+
+    if (this.contactForm.invalid) {
+      return;
+    }
+
+    this.apiSer.submitContact(this.contactForm.value).subscribe({
+      next: res => {
+        alert('Contact submitted successfully!');
+        this.contactForm.reset();
+        this.submitted = false;
+      },
+      error: err => {
+        alert('Submission failed. Try again.');
+        console.error(err);
+      }
+    });
+  }
 
 }
